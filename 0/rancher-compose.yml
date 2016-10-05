@@ -1,0 +1,21 @@
+.catalog:
+    name: "Deployment Pipeline"
+    version: "v0.1"
+    description: "Deployment Pipeline with XL Release, Jenkins and XL Deploy"
+    questions:
+     - variable: "None at this time"
+       label: "None"
+       description: "We will not be using variables now"
+       type: "string"
+
+xld-service:
+  scale: 1
+xlr-service:
+  scale: 1
+jenkins-service:
+  scale: 1
+lb:
+  scale: 1
+  load_balancer_config:
+    name: lb config
+# do http://docs.rancher.com/rancher/v1.2/en/cattle/health-checks/

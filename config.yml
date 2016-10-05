@@ -1,0 +1,7 @@
+name: Deployment Pipeline
+description: |
+  Deployment Pipeline with XL Release, Jenkins and XL Deploy
+version: v0.1
+category: Deployment Services
+maintainer: daddy
+projectURL: www.xebia.com
