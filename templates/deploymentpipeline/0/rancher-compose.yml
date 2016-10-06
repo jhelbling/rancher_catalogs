@@ -8,16 +8,19 @@
        label: "XLD Port"
        required: true
        type: "int"
+       default: 4516
      - variable: "XLRPORT"
        description: "Port Number of XL Release"
        label: "XLR Port"
        required: true
        type: "int"
+       default: 5516
      - variable: "JENKINSPORT"
        description: "Port Number of Jenkins"
        label: "XLD Port"
        required: true
        type: "int"
+       default: 8080
 xld-service:
   scale: 1
 xlr-service:
