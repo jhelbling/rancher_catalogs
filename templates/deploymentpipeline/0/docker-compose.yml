@@ -1,23 +1,15 @@
 xld-service:
   image: ffung/xldeploy
-  ports:
-  - 4516
 xlr-service:
   image: rchrd/xlrelease:5.0.1
-  ports:
-  - 5516
 jenkins-service:
   image: jenkins
-  ports:
-  - 8080
-# http://docs.rancher.com/rancher/v1.2/en/cattle/adding-load-balancers/
 lb:
   image: rancher/load-balancer-service
   ports:
-  # Listen on public port 6666 and direct traffic to private port 4516 of the service
-  - 4444:4516
-  - 5555:5516
-  - 8888:8080
+  - ${XLDPORT}:4516
+  - ${XLRPORT}:5516
+  - ${JENKINSPORT}:8080
   image: rancher/load-balancer-service
   links:
   - xld-service:xld-service

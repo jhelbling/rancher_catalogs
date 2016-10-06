@@ -2,12 +2,25 @@
     name: "Deployment Pipeline"
     version: "v0.1"
     description: "Deployment Pipeline with XL Release, Jenkins and XL Deploy"
-    questions:
-     - variable: "None at this time"
-       label: "None"
-       description: "We will not be using variables now"
-       type: "string"
-
+  questions:
+  - variable: "XLDPORT"
+    type: "int"
+    label: "Port Number of XL Deploy"
+    description: "Which port should XL Deploy listen on?"
+    default: 4516
+    required: true
+  - variable: "XLRPORT"
+    type: "int"
+    label: "Port Number of XL Release"
+    description: "Which port should XL Release listen on?"
+    default: 5516
+    required: true
+  - variable: "JENKINSPORT"
+    type: "int"
+    label: "Port Number of Jenkins"
+    description: "Which port should Jenkins listen on?"
+    default: 8080
+    required: true
 xld-service:
   scale: 1
 xlr-service:
@@ -18,4 +31,3 @@ lb:
   scale: 1
   load_balancer_config:
     name: lb config
-# do http://docs.rancher.com/rancher/v1.2/en/cattle/health-checks/
