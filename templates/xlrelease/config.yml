@@ -1,0 +1,7 @@
+name: XL Release
+description: |
+  XL Release for life cycle management of your applications
+version: v0.1
+category: Deployment Services
+maintainer: xebia
+projectURL: https://github.com/ltutar/rancher_catalogs

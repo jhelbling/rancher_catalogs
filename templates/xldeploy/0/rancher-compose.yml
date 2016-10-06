@@ -8,7 +8,7 @@
        label: "XLD Port"
        required: true
        type: "int"
-       default: 4516
+       default: 4517
 xld-service:
   scale: 1
 lb:

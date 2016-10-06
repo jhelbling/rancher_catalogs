@@ -1,0 +1,9 @@
+xlr-service:
+  image: rchrd/xlrelease:5.0.1
+lb:
+  image: rancher/load-balancer-service
+  ports:
+  - ${XLRPORT}:5516
+  image: rancher/load-balancer-service
+  links:
+  - xlr-service:xlr-service

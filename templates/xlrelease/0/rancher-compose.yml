@@ -1,0 +1,17 @@
+.catalog:
+    name: "XL Release"
+    version: "v0.1"
+    description: "XL Release for application life cycle management"
+    questions:
+     - variable: "XLRPORT"
+       description: "Port Number of XL Release"
+       label: "XLR Port"
+       required: true
+       type: "int"
+       default: 5517
+xlr-service:
+  scale: 1
+lb:
+  scale: 1
+  load_balancer_config:
+    name: lb config
