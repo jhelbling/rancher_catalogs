@@ -1,0 +1,9 @@
+jenkins-service:
+  image: jenkins
+lb:
+  image: rancher/load-balancer-service
+  ports:
+  - ${JENKINSPORT}:8080
+  image: rancher/load-balancer-service
+  links:
+  - jenkins-service:jenkins-service

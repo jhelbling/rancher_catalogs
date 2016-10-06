@@ -17,7 +17,7 @@
        default: 5516
      - variable: "JENKINSPORT"
        description: "Port Number of Jenkins"
-       label: "XLD Port"
+       label: "Jenkins Port"
        required: true
        type: "int"
        default: 8080

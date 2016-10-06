@@ -1,0 +1,17 @@
+.catalog:
+    name: "Jenkins"
+    version: "v0.1"
+    description: "Jenkins to build your applications"
+    questions:
+     - variable: "JENKINSPORT"
+       description: "Port Number of Jenkins"
+       label: "Jenkins Port"
+       required: true
+       type: "int"
+       default: 8081
+jenkins-service:
+  scale: 1
+lb:
+  scale: 1
+  load_balancer_config:
+    name: lb config
