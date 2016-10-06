@@ -1,0 +1,10 @@
+xld-service:
+  image: ffung/xldeploy
+lb:
+  image: rancher/load-balancer-service
+  ports:
+  - ${XLDPORT}:4516
+  image: rancher/load-balancer-service
+  links:
+  - xld-service:xld-service
+

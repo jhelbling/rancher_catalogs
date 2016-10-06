@@ -1,0 +1,7 @@
+name: XL Deploy
+description: |
+  XL Deploy to deploy your applications
+version: v0.1
+category: Deployment Services
+maintainer: xebia
+projectURL: https://github.com/ltutar/rancher_catalogs

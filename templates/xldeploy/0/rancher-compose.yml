@@ -1,0 +1,17 @@
+.catalog:
+    name: "XL Deploy"
+    version: "v0.1"
+    description: "XL Deploy to deploy your applications"
+    questions:
+     - variable: "XLDPORT"
+       description: "Port Number of XL Deploy"
+       label: "XLD Port"
+       required: true
+       type: "int"
+       default: 4516
+xld-service:
+  scale: 1
+lb:
+  scale: 1
+  load_balancer_config:
+    name: lb config
