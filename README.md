@@ -1,2 +1,2 @@
-# deploymentpipeline
-This repository contains rancher catalog
+# rancher_catalogs
+This repository contains rancher catalogs
