@@ -1,5 +1,7 @@
 xld-service:
-  image: ffung/xldeploy
+  image: ${REGISTRY}/xldeploy:5.5.3
+  environment:
+    - PLUGINS_FILE_URL=${PLUGINS_FILE_URL}
 xlr-service:
   image: rchrd/xlrelease:5.0.1
 jenkins-service:

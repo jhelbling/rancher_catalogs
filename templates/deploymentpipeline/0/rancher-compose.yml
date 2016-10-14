@@ -3,6 +3,16 @@
     version: "v0.1"
     description: "Deployment Pipeline with XL Release, Jenkins and XL Deploy"
     questions:
+     - variable: "REGISTRY"
+       description: "IP adress and port number of the private Docker registry"
+       label: "Private registry"
+       required: true
+       type: "string"
+     - variable: "PLUGINS_FILE_URL"
+       description: "URL for the file with XL Deploy plugins configuration"
+       label: "Plugins file URL"
+       required: false
+       type: "string"
      - variable: "XLDPORT"
        description: "Port Number of XL Deploy"
        label: "XLD Port"
