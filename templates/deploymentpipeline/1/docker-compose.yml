@@ -1,0 +1,25 @@
+xld-service:
+  image: ${REGISTRY}/xldeploy:5.5.5
+  labels:
+    io.rancher.container.pull_image: always
+  environment:
+    - PLUGINS_FILE_URL=${PLUGINS_FILE_URL}
+xlr-service:
+  image: rchrd/xlrelease:5.0.1
+  labels:
+    io.rancher.container.pull_image: always
+jenkins-service:
+  image: jenkins:2.7.4-alpine
+  labels:
+    io.rancher.container.pull_image: always
+lb:
+  image: rancher/load-balancer-service
+  ports:
+  - ${XLDPORT}:4516
+  - ${XLRPORT}:5516
+  - ${JENKINSPORT}:8080
+  image: rancher/load-balancer-service
+  links:
+  - xld-service:xld-service
+  - xlr-service:xlr-service
+  - jenkins-service:jenkins-service

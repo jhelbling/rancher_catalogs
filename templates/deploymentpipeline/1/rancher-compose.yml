@@ -1,0 +1,43 @@
+.catalog:
+    name: "Deployment Pipeline"
+    version: "v0.2"
+    description: "Deployment Pipeline with XL Release, Jenkins and XL Deploy"
+    questions:
+     - variable: "REGISTRY"
+       description: "IP adress and port number of the private Docker registry"
+       label: "Private registry"
+       required: true
+       type: "string"
+     - variable: "PLUGINS_FILE_URL"
+       description: "URL for the file with XL Deploy plugins configuration"
+       label: "Plugins file URL"
+       required: false
+       type: "string"
+     - variable: "XLDPORT"
+       description: "Port Number of XL Deploy"
+       label: "XLD Port"
+       required: true
+       type: "int"
+       default: 4516
+     - variable: "XLRPORT"
+       description: "Port Number of XL Release"
+       label: "XLR Port"
+       required: true
+       type: "int"
+       default: 5516
+     - variable: "JENKINSPORT"
+       description: "Port Number of Jenkins"
+       label: "Jenkins Port"
+       required: true
+       type: "int"
+       default: 8080
+xld-service:
+  scale: 1
+xlr-service:
+  scale: 1
+jenkins-service:
+  scale: 1
+lb:
+  scale: 1
+  load_balancer_config:
+    name: lb config
