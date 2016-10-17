@@ -33,10 +33,31 @@
        default: 8080
 xld-service:
   scale: 1
+  health_check:
+    port: 4516
+    interval: 2000
+    initializing_timeout: 60000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
+    response_timeout: 2000
 xlr-service:
   scale: 1
+  health_check:
+    port: 5516
+    interval: 2000
+    initializing_timeout: 60000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
+    response_timeout: 2000
 jenkins-service:
   scale: 1
+  health_check:
+    port: 8080
+    interval: 2000
+    initializing_timeout: 60000
+    unhealthy_threshold: 3
+    healthy_threshold: 2
+    response_timeout: 2000
 lb:
   scale: 1
   load_balancer_config:
