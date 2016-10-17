@@ -1,5 +1,7 @@
 xlr-service:
   image: rchrd/xlrelease:5.0.1
+  labels:
+    io.rancher.container.pull_image: always
 lb:
   image: rancher/load-balancer-service
   ports:

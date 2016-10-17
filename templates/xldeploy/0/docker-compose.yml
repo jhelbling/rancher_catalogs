@@ -1,5 +1,7 @@
 xld-service:
-  image: ffung/xldeploy
+  image: ffung/xldeploy:5.5.5
+  labels:
+    io.rancher.container.pull_image: always
 lb:
   image: rancher/load-balancer-service
   ports:

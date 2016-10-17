@@ -1,5 +1,7 @@
 jenkins-service:
-  image: jenkins
+  image: jenkins:2.19.1-alpine
+  labels:
+    io.rancher.container.pull_image: always
 lb:
   image: rancher/load-balancer-service
   ports:
